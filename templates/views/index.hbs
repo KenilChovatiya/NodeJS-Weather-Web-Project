@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headerLink}}
+    <title>Home Page</title>
+</head>
+<body>
+     {{>navbar}}
+
+      <div class="container" id="mainSection">
+          <div class="main_left">
+                <h4>Welcome To Weather App</h4>
+                <h2>Get The Latest <span>Weather</span> Info Of Your City</h2>
+                <a href="/weather"><button id="btnCheck">Check Now</button></a>
+          </div>
+          <div class="main_right">
+            <div class="imgBox" id="slides">
+                <img src="images/Wheather_img2.jpg" alt="" id="slideImg">
+            </div>
+          </div>
+      </div>
+
+      {{>footer}}
+
+      <script>
+          const slides = document.getElementById('slides');
+          const slideImg = document.getElementById('slideImg');
+          let i = 1;
+
+          function slideImgFunc(){
+              i++;
+              if(i==4){i = 2;}
+              slideImg.src = `images/Wheather_img${i}.jpg`;
+          }
+
+          setInterval(() => {
+              slideImgFunc();
+          }, 3000);
+      </script>
+</body>
+</html>

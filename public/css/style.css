@@ -1,0 +1,334 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Kanit:wght@300&family=Roboto+Condensed:wght@300;400&family=Ubuntu&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Kanit:wght@300&family=Libre+Baskerville&family=Roboto+Condensed:wght@300;400&family=Ubuntu&display=swap');
+/* font-family: 'Ubuntu', sans-serif; */
+/* font-family: 'Libre Baskerville', serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+#mainSection{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 50%;
+    height: 13rem;
+    /* border: 2px solid black; */
+}
+
+.main_left h4{
+    color: chocolate;
+    font-family: 'Libre Baskerville', serif;
+
+}
+
+.main_left h2{
+    font-family: 'Libre Baskerville', serif;
+}
+
+.main_left h2 span{
+    color: #007cff;
+
+}
+
+.main_left button, .AboutInfo button, .ErrorInfo button{
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px 0 gray;
+    padding: 8px;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.main_right {
+    width: 50%;
+    /* border: 2px solid black; */
+
+}
+
+.main_right .imgBox{
+    width: 100%;
+    /* border: 2px solid black; */
+    transition: all .3s linear;
+}
+
+.main_right .imgBox img{
+    width: 100%;
+    transition: all .3s linear;
+}
+
+
+/* Weather Section */
+
+#main_Weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#searchBox{
+    width: 67%;
+    /* border: 2px solid black; */
+    /* background-color: black; */
+    border-radius: 15px;
+    padding: 10px 0 10px 10px;
+}
+
+#searchIn{
+    width: 90%;
+    height: 40px;
+    border-radius: 15px;
+    padding: 0 7px;
+}    
+#searchBtn{
+    /* height: 40px; */
+    padding: 6px 10px;
+    border-radius: 15px;
+    background-color: #007cff;
+    color: white;
+    border: none;
+}
+
+.weatherBox{
+    /* border: 2px solid black; */
+    background-color: #007cff;
+    width: 23%;
+    height: 200px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.weatherDiv1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: thistle;
+}
+
+.weatherDiv2 b{
+    font-size: 25px;
+    color: rgb(201 190 190);
+    text-transform: capitalize;
+}
+
+.weatherDiv3{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid white; */
+}
+
+.weatherDiv3 h3, .weatherDiv3 #temp_status{
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 20px;
+    padding: 0 15px;
+}
+
+
+/* About Css */
+
+#main_about, .flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.AboutImg, .ErrorImg{
+    width: 57%;
+}
+
+.AboutImg img, .ErrorImg img{
+    width: 90%;
+}
+
+.AboutInfo, .ErrorInfo{
+    width: 50%;
+}
+
+.AboutInfo h2{
+    color: #fa9746;
+}
+
+.AboutInfo h3 span{
+    color: #007cff;
+}
+
+
+/* Error Page */
+#main_error h3{
+    margin-top: 50px;
+    color: red;
+}
+
+.ErrorImg{
+    width: 50%;
+}
+
+.ErrorImg img{
+    width: 100%;
+}
+
+.ErrorInfo{
+    width: 50%;
+    text-align: center;
+}
+/* Footer */
+
+footer{
+    background-color: black;
+    color: white;
+    height: 78px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+
+@media (max-width:1200px) {
+    #searchIn{
+        width: 88%;
+    }   
+     
+    .weatherBox{
+        width: 40%;
+    }  
+}
+
+@media (max-width:992px) {
+    #searchIn{
+        width: 84%;
+    }  
+}
+
+@media (max-width:768px) {
+
+    #mainSection{
+        /* border: 2px solid red; */
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main_left{
+        align-items: center;
+        width: 100%;
+    }
+
+    .main_left h4{
+        font-size: 20px;
+    }
+
+    .main_left h2{
+        font-size: 25px;
+    }
+    .main_right {
+        width: 100%;
+    }
+
+    /* Weather  */
+    #searchBox{
+        width: 84%;
+    }  
+    #searchIn{
+        width: 80%;
+    }   
+    
+    .weatherBox{
+        width: 50%;
+    }
+
+    /* About */
+
+    .AboutImg, .ErrorImg{
+        width: 70%;
+    }
+    
+    .AboutInfo, .ErrorInfo{
+        width: 60%;
+    }
+}
+
+@media (max-width: 532px) {
+    #searchBox{
+        width: 94%;
+    }    
+    #searchIn{
+        width: 80%;
+    }  
+    .weatherBox{
+        width: 90%;
+    }  
+
+    .AboutImg, .ErrorImg{
+        width: 80%;
+    }
+    
+    .AboutInfo, .ErrorInfo{
+        width: 70%;
+    }
+}
+
+@media (max-width: 432px) {
+    #searchIn{
+        width: 77%;
+    }  
+
+    .AboutImg, .ErrorImg{
+        width: 90%;
+    }
+    
+    .AboutInfo, .ErrorInfo{
+        width: 80%;
+    }
+}
+
+@media (max-width: 366px) {
+    #searchIn{
+        width: 73%;
+    }  
+
+    .AboutImg, .ErrorImg{
+        width: 100%;
+    }
+    
+    .AboutInfo, .ErrorInfo{
+        width: 85%;
+    }
+}
+
+
+
+
+.hide{
+    display: none;
+}

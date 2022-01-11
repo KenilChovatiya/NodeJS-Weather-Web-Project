@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headerLink}}
+    <title>Weather Page</title>
+</head>
+<body>
+    {{>navbar}}
+
+      <div class="container" id="main_Weather">
+          <div id="searchBox">
+              <input type="text" name="search" id="searchIn" placeholder="Search here">
+              <button id="searchBtn">Search</button>
+          </div>
+
+          <div class="weatherBox">
+            <div class="weatherDiv1">
+                <p id="Day">Tauseday</p>
+                <p id="DateMonth">8<sup>th</sup> jan</p>
+            </div>
+            <div class="weatherDiv2 hide">
+                <b id="city_name">Delhi, In</b>
+            </div>
+            <div class="weatherDiv3 ">
+                <h3 id="temprature">0&#176 C</h3>
+                <i id="temp_status"><i class='fas fa-cloud' style='color: rgb(255, 255, 255); font-size: 50px;'>  </i></i>
+            </div>
+            <!-- <div class="">
+              <h6>Get Output Here</h6>
+            </div> -->
+          </div>
+        </div>
+
+        {{>footer}}
+
+        <script src="js/main.js"></script>
+</body>
+</html>
